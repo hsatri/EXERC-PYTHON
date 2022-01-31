@@ -1,0 +1,33 @@
+algorithm
+variables A,B,S,choix:entier
+debut
+ecrire("donner la valeur de A: ") lire A
+ecrire("donner la valeur de B: ") lire B
+ecrire("choix 1. comparer deux entiers \n choix 2. somme de deux entiers \n choix 3. quitter \n")
+ecrire("Taper le nombre de votre choix : ") lire choix
+si choix=1 alors
+	si A>=0 Et B>=0 
+		ecrire("la somme est positive")
+	si A<0 Et B<0 
+		ecrire("la somme est negative")
+	si A<0 Et B>=0 alors 
+		si B>-A
+			ecrire("la somme est positive")
+		sinon
+			ecrire("la somme est negative")
+		FINSI
+	FINSI
+	si A>=0 Et B<0 alors 
+		si A>-B
+			ecrire("la somme est positive")
+		sinon
+			ecrire("la somme est negative")
+		FINSI
+	FINSI
+FINSI
+si choix=2
+	S<--A+B
+	ecrire("la somme est "&S)
+
+si choix=3
+	exit(0)
